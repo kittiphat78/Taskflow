@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaskFlow
 
-## Getting Started
+TaskFlow คือเว็บแอปพลิเคชันจัดการงาน (Task Management) แบบ Fullstack  
+พัฒนาด้วย Next.js, Prisma และ NextAuth รองรับระบบสมาชิกและการจัดการงานแบบแยกตามผู้ใช้งาน
 
-First, run the development server:
+---
+
+## 🔹 ความสามารถของระบบ
+
+- สมัครสมาชิก / เข้าสู่ระบบ (Authentication)
+- เพิ่ม แก้ไข ลบ งาน (CRUD Tasks)
+- ระบบแท็ก (Tags)
+- แสดงรายการงานแบบ Dashboard
+- API Routes ที่มีการป้องกันด้วยระบบล็อกอิน
+- เชื่อมต่อฐานข้อมูลผ่าน Prisma ORM
+
+---
+
+## 🛠 เทคโนโลยีที่ใช้
+
+- Next.js (App Router)
+- TypeScript
+- Prisma ORM
+- SQLite
+- NextAuth
+- Tailwind CSS
+
+---
+
+## 📦 วิธีติดตั้งและใช้งาน
+
+### 1) Clone โปรเจค
+
+```bash
+git clone https://github.com/USERNAME/Taskflow.git
+```
+
+### 2) ติดตั้ง dependencies
+
+```bash
+npm install
+```
+
+### 3) ตั้งค่าไฟล์ .env
+
+สร้างไฟล์ `.env` แล้วเพิ่มค่า:
+
+```env
+DATABASE_URL="file:./dev.db"
+NEXTAUTH_SECRET="your_secret_key"
+```
+
+### 4) รันโปรเจค
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+จากนั้นเปิดเบราว์เซอร์ที่:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📁 โครงสร้างโปรเจคโดยย่อ
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` → หน้าเว็บและ routing
+- `app/api/` → API ของระบบ
+- `lib/` → ฟังก์ชันช่วยเหลือต่าง ๆ
+- `prisma/` → โครงสร้างฐานข้อมูลและ migration
+- `types/` → Type definitions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 จุดประสงค์ของโปรเจค
 
-## Deploy on Vercel
+โปรเจคนี้จัดทำขึ้นเพื่อฝึกพัฒนาเว็บแบบ Fullstack  
+ครอบคลุมการจัดการฐานข้อมูล ระบบสมาชิก และการออกแบบโครงสร้างโปรเจคที่ใช้งานจริง
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+พัฒนาโดย: Kittiphat Yotwong
